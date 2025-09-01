@@ -287,7 +287,7 @@ function setupDownloads() {
   const bylawsLink = document.getElementById("bylaws-link");
 
   function downloadDummy() {
-    const blob = new Blob(["NSBE Ole Miss — Bylaws (placeholder)"], { type: "application/pdf" });
+    const blob = new Blob(["https://drive.google.com/file/d/1z-iagHyR8klx4tSDOudAGNddNti1dJYZ/view?usp=sharing"], { type: "application/pdf" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
