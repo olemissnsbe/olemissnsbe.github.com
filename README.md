@@ -1,1 +1,1 @@
-olemissnsbe.github.com/index
+olemissnsbe.github.io/index.html
