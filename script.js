@@ -132,7 +132,7 @@ function googleCalendarLink(evObj) {
   function toUTCBasic(dt) {
     return dt.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
   }
-  const base = "https://calendar.google.com/calendar/render?action=TEMPLATE";
+  const base = "https://calendar.google.com/calendar/u/3?cid=MjViN2IxODA3ZjcyZjc0NDVlZTdlODkzYTE0OWNjYmNjNTNhMTI0ZDgzODkwZmQ0ODA0ZmY0ODA4NWJjNTNiM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t";
   const params = new URLSearchParams({
     text: evObj.title,
     details: evObj.description,
