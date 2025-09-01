@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NSBE • Ole Miss Chapter</title>
+  <meta name="description" content="NSBE Ole Miss — Region III • University of Mississippi" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container nav-row">
+      <a class="brand" href="#home">
+        <span class="brand-badge">NSBE</span>
+        <div class="brand-txt">
+          <strong>Ole Miss Chapter</strong>
+          <small>Region III • University of Mississippi</small>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#officers">Officers</a>
+        <a href="#events">Events</a>
+        <a href="#programs">Programs</a>
+        <a href="#membership">Membership</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-ctas">
+        <a class="btn btn-primary" href="#membership">Join</a>
+        <a class="btn btn-ghost" href="#sponsors">Sponsor</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>National Society of Black Engineers — Ole Miss</h1>
+        <p>Increasing the number of culturally responsible Black Engineers who excel academically, succeed professionally, and positively impact the community.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#membership">Become a Member</a>
+          <a class="btn btn-light btn-lg" href="#events">See Upcoming Events</a>
+        </div>
+        <div class="hero-stats">
+          <span>100+ members</span>
+          <span>Weekly programs</span>
+          <span>Corporate partners</span>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-dark">
+      <div class="container grid-2">
+        <div>
+          <h2>About Our Chapter</h2>
+          <p>We are the Ole Miss Chapter of the National Society of Black Engineers (NSBE), part of Region III. Our chapter provides academic support, professional development, leadership opportunities, and community engagement for Black engineers and allies at the University of Mississippi.</p>
+          <ul class="checklist">
+            <li>Weekly study jams & tutoring</li>
+            <li>Resume reviews & interview prep</li>
+            <li>STEM outreach via Pre‑College Initiative (PCI)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key Links</h3>
+          <div class="links-grid">
+            <a class="btn btn-ghost block" href="#membership">Join NSBE</a>
+            <a class="btn btn-ghost block" href="#sponsors">Sponsor Us</a>
+            <a class="btn btn-ghost block" href="#events">Events</a>
+            <a class="btn btn-ghost block" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Officers -->
+    <section id="officers" class="section section-darker">
+      <div class="container">
+        <h2>2025–26 Officers</h2>
+        <div class="cards-grid" id="officers-grid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section section-dark">
+      <div class="container">
+        <div class="row-between">
+          <h2>Upcoming Events</h2>
+          <input id="event-search" class="input" placeholder="Search events (e.g., tutoring, GE)..." />
+        </div>
+        <div class="cards-grid" id="events-grid">
+          <!-- Injected by JS -->
+        </div>
+        <p class="muted mt-2">Want your event listed? <a href="#contact">Contact Programs</a>.</p>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section section-darker">
+      <div class="container">
+        <h2>What We Do</h2>
+        <div class="cards-grid four">
+          <div class="card"><h3>Academic Excellence</h3><p>Study jams, tutoring, and scholarship guidance to keep GPAs thriving.</p></div>
+          <div class="card"><h3>Professional Development</h3><p>Resume reviews, mock interviews, corporate sessions, and conferences.</p></div>
+          <div class="card"><h3>Community Impact</h3><p>STEM outreach with K‑12 schools through PCI and mentorship.</p></div>
+          <div class="card"><h3>Leadership</h3><p>Committee roles and officer development to grow as a leader.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership -->
+    <section id="membership" class="section section-dark">
+      <div class="container grid-2">
+        <div>
+          <h2>Join NSBE</h2>
+          <p>Becoming a member connects you to a national network, conferences, scholarships, and leadership opportunities. Dues support programming and travel.</p>
+          <ol class="ol">
+            <li>Register nationally at <a href="https://nsbe.org" target="_blank" rel="noopener">nsbe.org</a> (school: University of Mississippi).</li>
+            <li>Pay chapter dues (TBD) via the link we send after you submit the form.</li>
+            <li>Join a committee (Programs, PCI, Finance, Publicity, Membership).</li>
+          </ol>
+          <div class="row">
+            <a class="btn btn-primary" href="#join-form">Fill Interest Form</a>
+            <a class="btn btn-light" href="#" id="download-bylaws">Download Bylaws (PDF)</a>
+          </div>
+          <p class="muted">Note: We welcome students of all backgrounds who support NSBE’s mission.</p>
+        </div>
+        <form id="join-form" class="card form">
+          <h3>Interest Form</h3>
+          <input class="input" type="text" placeholder="Full name" required>
+          <input class="input" type="email" placeholder="@go.olemiss.edu email" required>
+          <input class="input" type="text" placeholder="Major (e.g., CS, EE)" required>
+          <input class="input" type="text" placeholder="Grad year (e.g., 2026)" required>
+          <textarea class="input" rows="5" placeholder="What do you want from NSBE this year?"></textarea>
+          <button class="btn btn-primary block" type="submit">Submit</button>
+          <p class="muted xs">(Wire this to Google Forms or a simple API later.)</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section id="sponsors" class="section section-darker">
+      <div class="container">
+        <div class="row-between">
+          <h2>Sponsor Our Chapter</h2>
+          <a class="btn btn-light" href="#contact">Request Sponsor Packet →</a>
+        </div>
+        <div class="cards-grid four" id="sponsor-tiers">
+          <!-- Injected by JS -->
+        </div>
+        <div class="grid-2 mt-2">
+          <div class="card">
+            <h3>Current Partners</h3>
+            <p class="muted">Add logos here (PNG/SVG). We’ll build a carousel later.</p>
+          </div>
+          <div class="card">
+            <h3>Job Board</h3>
+            <p class="muted">Post internships, co‑ops, and roles for our members. Email <a href="mailto:careers@nsbeolemiss.org">careers@nsbeolemiss.org</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section section-dark">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop" alt="Team at Fall GBM">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop" alt="Study Jam Night">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" alt="Conference Group Photo">
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1600&auto=format&fit=crop" alt="Outreach STEM Day">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-darker">
+      <div class="container grid-2">
+        <div>
+          <h2>Contact Us</h2>
+          <p>Questions about membership, partnerships, or events? Reach out anytime.</p>
+          <div class="stack">
+            <span>✉️ info@nsbeolemiss.org</span>
+            <span>📞 (000) 000‑0000</span>
+            <span>🌐 University of Mississippi, Oxford, MS</span>
+          </div>
+          <div class="row">
+            <a class="btn btn-ghost" href="#" aria-label="Instagram">Instagram</a>
+            <a class="btn btn-ghost" href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a class="btn btn-ghost" href="#" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+        <form class="card form" id="contact-form">
+          <h3>Send a Message</h3>
+          <input class="input" type="text" placeholder="Name" required>
+          <input class="input" type="email" placeholder="Email" required>
+          <textarea class="input" rows="5" placeholder="How can we help?"></textarea>
+          <button class="btn btn-primary block" type="submit">Send</button>
+          <p class="muted xs">(Wire this to an email service later.)</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container grid-3">
+      <div>
+        <strong>NSBE • Ole Miss Chapter</strong>
+        <p class="muted">Region III • University of Mississippi</p>
+        <p class="muted">© <span id="year"></span> NSBE Ole Miss. All rights reserved.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <ul class="list">
+          <li><a href="#events">Events</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Compliance</strong>
+        <ul class="list">
+          <li><a href="#" id="bylaws-link">Chapter Constitution & Bylaws (PDF)</a></li>
+          <li><a href="#">Anti‑Hazing Policy</a></li>
+          <li><a href="#">DEI Statement</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
