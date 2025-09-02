@@ -22,27 +22,117 @@ const officers = [
 // If gcalUrl is missing, we auto-generate a Google Calendar link.
 const events = [
   {
-    title: "General Body Meeting #1",
-    date: "Aug 29, 2025",
-    time: "6:00–7:30 PM",
-    location: "Brewer Hall 205",
-    description: "Kickoff, fall overview, committees sign-up, snacks provided.",
-    gcalUrl: "https://calendar.google.com/calendar/embed?src=25b7b1807f72f7445ee7e893a149ccbcc53a124d83890fd4804ff48085bc53b3%40group.calendar.google.com&ctz=America%2FChicago",
-  },
-  {
-    title: "Study Jam + Tutoring",
+    title: "NSBE Interest Meeting",
     date: "Sep 3, 2025",
-    time: "5:30–8:00 PM",
-    location: "Weir Hall CS Commons",
-    description: "Peer tutoring for CS, EE, Math, and Physics. Bring your laptop."
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "General Meeting. Room 105 in Brevard Hall. 15 points."
   },
   {
-    title: "Corporate Info Session: GE Aerospace",
-    date: "Sep 9, 2025",
-    time: "6:00–7:00 PM",
-    location: "Brewer Hall 112",
-    description: "Resume tips, internships, and co-op opportunities."
+    title: "Monthly Meeting",
+    date: "Sep 15, 2025",
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "General Meeting. Room 105 in Brevard Hall. 15 points."
   },
+  {
+    title: "NSBE Week: NSBE Jr",
+    date: "Sep 21, 2025",
+    time: "4:00–4:30 PM",
+    location: "Oxford, MS",
+    description: "Service. 25 points."
+  },
+  {
+    title: "Fall STEM Career Fair",
+    date: "Sep 23, 2025",
+    time: "10:00 AM–1:00 PM",
+    location: "Pavilion at Ole Miss",
+    description: "Development."
+  },
+  {
+    title: "NSBE WEEK: Family Feud Collab",
+    date: "Sep 24, 2025",
+    time: "5:00–7:00 PM",
+    location: "Oxford, MS",
+    description: "10 points."
+  },
+  {
+    title: "NSBE WEEK: Tech Shop",
+    date: "Sep 25, 2025",
+    time: "12:15–1:00 PM",
+    location: "Brevard Hall 105",
+    description: "20 points."
+  },
+  {
+    title: "NSBE WEEK: Networking",
+    date: "Sep 22, 2025",
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "50 points."
+  },
+  {
+    title: "NSBE Tailgate",
+    date: "Sep 27, 2025",
+    time: "All Day",
+    location: "The Circle, Oxford, MS",
+    description: "Bonding. 10 points."
+  },
+  {
+    title: "Monthly Meeting ft. PBS",
+    date: "Oct 20, 2025",
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "Monthly meeting with Phi Beta Sigma. 15 points."
+  },
+  {
+    title: "Networking w/ TRANE TECHNOLOGIES",
+    date: "Sep 10, 2025",
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "Networking. 50 Points."
+  },
+  {
+    title: "Networking w/ Boeing Pt. 2",
+    date: "Oct 13, 2025",
+    time: "5:00–6:00 PM",
+    location: "Virtual (Zoom)",
+    description: "Virtual Zoom. 50 points."
+  },
+  {
+    title: "Networking w/ Core & Main",
+    date: "Oct 13, 2025",
+    time: "12:00–1:00 PM",
+    location: "Virtual (Zoom)",
+    description: "Networking. 50 Points."
+  },
+  {
+    title: "Friendsgiving ft. Taylor Grocery",
+    date: "Nov 19, 2025",
+    time: "5:00–7:00 PM",
+    location: "Brevard Hall 105",
+    description: "Friendsgiving. 10 points."
+  },
+  {
+    title: "Monthly Meeting ft. KAP",
+    date: "Nov 17, 2025",
+    time: "5:00–6:00 PM",
+    location: "Brevard Hall 105",
+    description: "General Meeting. 15 points."
+  },
+  {
+    title: "Study Night ft. Hot Chocolate & Bundlets",
+    date: "Dec 3, 2025",
+    time: "5:00–7:00 PM",
+    location: "Brevard Hall 105",
+    description: "Study night. 10 points."
+  },
+  {
+    title: "Salvation Army",
+    date: "Dec 6, 2025",
+    time: "All Day",
+    location: "Oxford, MS",
+    description: "Service project."
+  }
 ];
 
 const sponsorTiers = [
