@@ -2,12 +2,20 @@
 
 // ------- Data -------
 const officers = [
-  { role: "President", person: "Alex Johnson", major: "Electrical Engineering", email: "president@nsbeolemiss.org" },
-  { role: "Vice President", person: "Taylor Smith", major: "Computer Science", email: "vp@nsbeolemiss.org" },
-  { role: "Secretary", person: "Riley Brown", major: "Mechanical Engineering", email: "secretary@nsbeolemiss.org" },
-  { role: "Treasurer", person: "Jordan Lee", major: "Civil Engineering", email: "treasurer@nsbeolemiss.org" },
-  { role: "Programs Chair", person: "Sydney Green", major: "Chemical Engineering", email: "programs@nsbeolemiss.org" },
-  { role: "PCI (Pre-College) Chair", person: "Chris Davis", major: "Computer Engineering", email: "pci@nsbeolemiss.org" },
+  { role: "President", person: "Tyneah Buckley", major: "Electrical Engineering", email: "president.nsbe.um@gmail.com" },
+  { role: "Vice President", person: "McKenzie Stanley", major: "Computer Science", email: "mlstanl2@go.olemiss.edu" },
+  { role: "Secretary", person: "Danaria Ward", major: "Computer Science", email: "djward1@go.olemiss.edu" },
+  { role: "Treasurer", person: "Chauncey Newsome Jr.", major: "Electrical Engineering", email: "treasurer@nsbeolemiss.org" },
+  { role: "Senator", person: "Nalaya Thompson", major: "Chemical Engineering", email: "senator@nsbeolemiss.org" },
+  { role: "Senator", person: "Jamari Osborne", major: "Biomedical Engineering", email: "senator@nsbeolemiss.org" },
+  { role: "Social Media Coordinator", person: "Jordan Cochran", major: "Mechanical Engineering", email: "media@nsbeolemiss.org" },
+  { role: "Fundraising Chair", person: "Landon Armstrong", major: "Electrical & Electronics Engineering", email: "fundraising@nsbeolemiss.org" },
+  { role: "Programs Chair", person: "Jaren Sullivan", major: "Mechanical Engineering", email: "programs@nsbeolemiss.org" },
+  { role: "Academic Excellence Chair", person: "Kermit Oville", major: "Mechanical Engineering", email: "excellence@nsbeolemiss.org" },
+  { role: "Membership Chair", person: "Destiny Bush", major: "Biomedical Engineering", email: "membership@nsbeolemiss.org" },
+  { role: "Alumni Extension Chair", person: "Addison Williams", major: "Mechanical Engineering", email: "alumni@nsbeolemiss.org" },
+  { role: "Telecommunications Chair", person: "Kahilyn Boyd", major: "Computer Science", email: "tech@nsbeolemiss.org" }, 
+  { role: "Community Engagement Coordinator", person: "Devyne Agulanna", major: "Biomedical Engineering", email: "community@nsbeolemiss.org" },
 ];
 
 // You can optionally set gcalUrl per event to use your prebuilt Google Calendar link.
