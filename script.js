@@ -26,7 +26,7 @@ const events = [
     date: "Aug 29, 2025",
     time: "6:00–7:30 PM",
     location: "Brewer Hall 205",
-    description: "Kickoff, fall overview, committees sign-up, snacks provided."
+    description: "Kickoff, fall overview, committees sign-up, snacks provided.",
     gcalUrl: "https://calendar.google.com/calendar/ical/25b7b1807f72f7445ee7e893a149ccbcc53a124d83890fd4804ff48085bc53b3%40group.calendar.google.com/public/basic.ics",
   },
   {
