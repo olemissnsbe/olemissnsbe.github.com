@@ -157,16 +157,28 @@ function el(tag, opts = {}) {
 function strong(text) { const s = document.createElement("strong"); s.textContent = text; return s; }
 const pad = (n) => String(n).padStart(2, "0");
 
-function parseDateTimeRange(dateStr, timeRangeStr) {
-  // dateStr: "Sep 3, 2025"
-  // timeRangeStr: "5:30–8:00 PM" OR "6–7:30 PM"
-  const endSuffix = (timeRangeStr.match(/\b(AM|PM)\b/i) || [])[0] || null;
-  const [rawStart, rawEnd] = timeRangeStr.split(dash).map(s => s.trim());
-  const startPart = endSuffix && !/\b(AM|PM)\b/i.test(rawStart) ? `${rawStart} ${endSuffix}` : rawStart;
-  const endPart = rawEnd;
+function parseDateTimeRange(dateStr, timeStr) {
+  // Supports:
+  //  - "5:00–6:30 PM"  (en/em dash or hyphen)
+  //  - "5:00 PM–6:30 PM"
+  //  - "10 AM–1 PM"
+  //  - "5:00 PM"       (assumes 60 min duration)
+  //  - "All Day"
+  //  - "All Day Event"
+  const dash = /–|—|-/;
 
+  // All-day
+  if (!timeStr || /all\s*day/i.test(timeStr)) {
+    const d = new Date(dateStr);
+    if (isNaN(d)) return { start: null, end: null };
+    const start = new Date(d); start.setHours(0, 0, 0, 0);
+    const end   = new Date(d); end.setHours(23, 59, 59, 0);
+    return { start, end };
+  }
+
+  // helper: "6:15 PM" or "6 PM" → {h,m}
   function to24hPieces(tstr) {
-    const m = tstr.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+    const m = tstr.trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
     if (!m) return null;
     let h = parseInt(m[1], 10);
     const mins = parseInt(m[2] || "0", 10);
@@ -182,9 +194,26 @@ function parseDateTimeRange(dateStr, timeRangeStr) {
     d.setHours(p.h, p.m, 0, 0);
     return d;
   }
-  const start = build(dateStr, startPart);
-  const end = build(dateStr, endPart);
-  return { start, end };
+
+  // split start/end (accept en dash, em dash, or hyphen)
+  const parts = timeStr.split(dash).map(s => s.trim());
+  if (parts.length === 1) {
+    // Single time -> default 60 minutes
+    const endSuffix = (parts[0].match(/\b(AM|PM)\b/i) || [])[0] || "PM";
+    const start = build(dateStr, parts[0]);
+    if (!start) return { start: null, end: null };
+    const end = new Date(start.getTime() + 60 * 60 * 1000);
+    return { start, end };
+  } else {
+    // Range; if first has no AM/PM, inherit from end
+    const endHasSuffix = /\b(AM|PM)\b/i.test(parts[1]);
+    const startPart = endHasSuffix && !/\b(AM|PM)\b/i.test(parts[0]) ? `${parts[0]} ${parts[1].match(/\b(AM|PM)\b/i)[0]}` : parts[0];
+    const endPart = parts[1];
+
+    const start = build(dateStr, startPart);
+    const end   = build(dateStr, endPart);
+    return { start, end };
+  }
 }
 
 function formatICSDate(dt) {
@@ -259,12 +288,18 @@ function renderOfficers() {
 }
 
 function annotateAndSortEvents(evts) {
-  const enriched = evts.map(e => {
+  const out = [];
+  evts.forEach(e => {
     const { start, end } = parseDateTimeRange(e.date, e.time) || {};
-    return { ...e, _start: start, _end: end };
-  }).filter(e => e._start instanceof Date && !isNaN(e._start));
-  enriched.sort((a, b) => a._start - b._start);
-  return enriched;
+    if (start instanceof Date && !isNaN(start) && end instanceof Date && !isNaN(end)) {
+      out.push({ ...e, _start: start, _end: end });
+    } else {
+      // optional: comment out if you don’t want console logs
+      console.warn("Skipped event (cannot parse time):", e);
+    }
+  });
+  out.sort((a, b) => a._start - b._start);
+  return out;
 }
 
 function renderEvents(list = events, { hidePast = true } = {}) {
