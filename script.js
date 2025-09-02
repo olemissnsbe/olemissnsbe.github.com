@@ -27,7 +27,7 @@ const events = [
     time: "6:00–7:30 PM",
     location: "Brewer Hall 205",
     description: "Kickoff, fall overview, committees sign-up, snacks provided."
-    // gcalUrl: "https://calendar.google.com/calendar/render?...",
+    // gcalUrl: "https://calendar.google.com/calendar/u/3?cid=MjViN2IxODA3ZjcyZjc0NDVlZTdlODkzYTE0OWNjYmNjNTNhMTI0ZDgzODkwZmQ0ODA0ZmY0ODA4NWJjNTNiM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
   },
   {
     title: "Study Jam + Tutoring",
