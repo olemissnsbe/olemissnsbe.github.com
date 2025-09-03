@@ -23,7 +23,7 @@ const officers = [
 const events = [
   {
     title: "NSBE Interest Meeting",
-    date: "Sep 3, 2025",
+    date: "Sep 8, 2025",
     time: "5:00–6:00 PM",
     location: "Brevard Hall 105",
     description: "General Meeting. Room 105 in Brevard Hall. 15 points."
