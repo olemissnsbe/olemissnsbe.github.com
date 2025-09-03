@@ -112,16 +112,62 @@
           </div>
           <p class="muted">Note: We welcome students of all backgrounds who support NSBE’s mission.</p>
         </div>
-        <form id="join-form" class="card form">
-          <h3>Interest Form</h3>
-          <input class="input" type="text" placeholder="Full name" required>
-          <input class="input" type="email" placeholder="@go.olemiss.edu email" required>
-          <input class="input" type="text" placeholder="Major (e.g., CS, EE)" required>
-          <input class="input" type="text" placeholder="Grad year (e.g., 2026)" required>
-          <textarea class="input" rows="5" placeholder="What do you want from NSBE this year?"></textarea>
-          <button class="btn btn-primary block" type="submit">Submit</button>
-          <p class="muted xs">(Wire this to Google Forms or a simple API later.)</p>
-        </form>
+        
+        <form id="join-form" class="card form"action="https://docs.google.com/forms/d/e/1FAIpQLSdztzrQDHfiUW3ODkKb6T3AQVBQXDAtU8zwzD8mV4q4jqnRbg/formResponse" method="POST" target="_self">
+  <h3>Interest Form</h3>
+  <input name="entry.1944027699" type="text" placeholder="Full name" required>
+  <input name="entry.1505517121" type="email" placeholder="@go.olemiss.edu email" required>
+  <input name="entry.298931383" type="tel" placeholder="Phone (optional)">
+
+  <select name="entry.555295377" required>
+    <option value="" selected disabled>Classification</option>
+    <option>Freshman</option>
+    <option>Sophomore</option>
+    <option>Junior</option>
+    <option>Senior</option>
+    <option>Graduate student</option>
+  </select>
+
+  <select name="entry.1683725770" required>
+    <option value="" selected disabled>Major</option>
+    <option>Mechanical Engineering</option>
+    <option>Biomedical Engineering</option>
+    <option>Chemical Engineering</option>
+    <option>Computer Engineering</option>
+    <option>Computer Science</option>
+    <option>Civil Engineering</option>
+    <option>Electrical Engineering</option>
+    <option>General Engineering</option>
+    <option>Geology</option>
+    <option>Geological Engineering</option>
+    <option>Mathematics</option>
+    <option>Other</option>
+  </select>
+
+  <fieldset>
+    <legend>Shirt Size</legend>
+    <label><input type="radio" name="entry.1256791532" value="XS" required> XS</label>
+    <label><input type="radio" name="entry.1256791532" value="S"> S</label>
+    <label><input type="radio" name="entry.1256791532" value="M"> M</label>
+    <label><input type="radio" name="entry.1256791532" value="L"> L</label>
+    <label><input type="radio" name="entry.1256791532" value="XL"> XL</label>
+    <label><input type="radio" name="entry.1256791532" value="XXL"> XXL</label>
+  </fieldset>
+
+  <textarea name="entry.1139327646" placeholder="What would you like to see from NSBE this semester?"></textarea>
+
+  <label>
+    <input type="checkbox" name="entry.1951697331" value="I understand" required>
+    I understand
+  </label>
+
+  <!-- optional but fine to include -->
+  <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="8241175698441713347">
+
+  <button type="submit">Submit</button>
+</form>
+
       </div>
     </section>
 
